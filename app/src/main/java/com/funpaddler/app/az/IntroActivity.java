@@ -5,6 +5,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -27,7 +28,7 @@ public class IntroActivity extends AppCompatActivity implements ViewPager.OnPage
     private LinearLayout viewPagerCountDots;
     private int dotsCount;
     private ImageView[] dots;
-    public SharedPrefrence preference;
+
     private Context mContext;
     Button buttonSign;
     int[] mResources = {R.drawable.slide_one, R.drawable.slide_two, R.drawable.slide_three};
@@ -39,7 +40,6 @@ public class IntroActivity extends AppCompatActivity implements ViewPager.OnPage
 
         setContentView(R.layout.activity_intro);
         mContext = IntroActivity.this;
-        preference = SharedPrefrence.getInstance(mContext);
 
         buttonSign = findViewById(R.id.tombolstar);
         buttonSign.setOnClickListener(new View.OnClickListener() {
