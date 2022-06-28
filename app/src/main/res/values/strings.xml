@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">FunPaddler</string>
+
+    <string name="exit">Are you sure you want to exit the application?</string>
+    <string name="yes">YES!</string>
+    <string name="no">NO</string>
+
+
+    <string name="introtext1">Sign up now!</string>
+    <string name="introdesc1">We will help you Get There, Move There or Get Food quickly.</string>
+    <string name="introtext2">Trackable</string>
+    <string name="introdesc2">Keep track of your ride, move or food delivery in real-time.</string>
+    <string name="introtext3">Speedy delivery</string>
+    <string name="introdesc3">Focus on your business and enjoyment while we Get you there in safety and comfort.</string>
+
 </resources>
