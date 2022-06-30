@@ -45,7 +45,7 @@
 
         </RelativeLayout>
 
-        <customfonts.Button_SF_Pro_Display_Medium
+        <TextView
             android:id="@+id/tombolstar"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -59,7 +59,7 @@
             android:textAllCaps="false"
             android:textColor="@color/white" />
 
-        <customfonts.TextViewSFProDisplayMedium
+        <TextView
             android:id="@+id/iv_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
