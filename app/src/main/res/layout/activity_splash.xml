@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff1616"
+    android:background="#FBFBFB"
     tools:context=".SplashActivity">
 
 
@@ -12,9 +12,10 @@
    <ImageView
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:src="@drawable/ic_launcher_background"
+       android:src="@drawable/funpaddle_logo"
        android:layout_centerHorizontal="true"
        android:scaleType="fitCenter"
+       android:layout_margin="50dp"
        android:layout_centerVertical="true"
        />
 
