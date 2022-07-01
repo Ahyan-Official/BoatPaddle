@@ -3,9 +3,9 @@
 
     <stroke
         android:width="@dimen/_1sdp"
-        android:color="#939393" />
+        android:color="#f0d4d1" />
 
-    <solid android:color="#FFFFFF" />
+    <solid android:color="#f0d4d1" />
 
 
     <padding
@@ -14,7 +14,7 @@
         android:top="@dimen/_1sdp" />
 
     <corners android:radius=
-        "@dimen/_10sdp"
+        "@dimen/_5sdp"
         />
 
 
