@@ -4,13 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff">
+    android:background="#f7f7f7">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:src="@drawable/circles_3"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,22 +20,85 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:gravity="center"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:gravity="start"
             android:text="Register"
+
+            android:layout_marginStart="@dimen/_10sdp"
             android:textColor="#000000"
-            android:textSize="28sp"
+            android:textSize="@dimen/_28sdp"
             android:textStyle="bold" />
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_30sdp"
+
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="0dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/google"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="start"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Google"
+                    android:textColor="#d8584b"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="0dp"
+                android:layout_margin="@dimen/_10sdp"
+
+                android:background="@drawable/facebook"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="start"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Facebook"
+                    android:textColor="#4b6fb6"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
             android:background="@drawable/etback"
             android:paddingTop="3dp"
             android:paddingBottom="3dp">
@@ -50,8 +109,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:background="@android:color/transparent"
+                android:layout_marginBottom="@dimen/_1sdp"
 
+                android:background="@android:color/transparent"
                 android:hint="Email"
                 android:minWidth="150dp"
                 android:paddingStart="@dimen/medium"
@@ -67,9 +127,10 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             android:background="@drawable/etback"
             android:paddingTop="3dp"
             android:paddingBottom="3dp">
@@ -80,6 +141,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/_1sdp"
                 android:background="@android:color/transparent"
                 android:hint="Password"
                 android:inputType="textPassword"
@@ -95,48 +157,26 @@
         </RelativeLayout>
 
 
-        <Button
-            android:id="@+id/register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
 
-            android:layout_marginTop="@dimen/_25sdp"
-            android:layout_marginEnd="45dp"
-            android:layout_marginBottom="@dimen/_10sdp"
-
-
-            android:background="@drawable/button"
-            android:text="Update Now"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_11sdp"
-            android:textStyle="bold" />
 
     </LinearLayout>
 
-    <LinearLayout
+    <Button
+        android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/_70sdp"
 
-        android:id="@+id/login"
-        android:gravity="center">
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="@dimen/_50sdp"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Already have an account? "
-            android:textColor="#000000"
-            android:textSize="@dimen/_10sdp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:textStyle="bold"
-            android:textColor="#FF9800"
-            android:textSize="@dimen/_10sdp"/>
-    </LinearLayout>
+        android:background="@drawable/button"
+        android:text="Update Now"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold" />
 
 
 

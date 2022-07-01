@@ -14,6 +14,9 @@
         android:theme="@style/Theme.FunPaddler"
         tools:targetApi="31">
         <activity
+            android:name=".CongratsActivity"
+            android:exported="false" />
+        <activity
             android:name=".SubmitDataActivity"
             android:exported="false" />
         <activity

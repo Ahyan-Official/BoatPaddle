@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"
-        android:src="@drawable/nodata" />
+         />
 
 
     <LinearLayout
@@ -24,7 +24,7 @@
         android:orientation="vertical">
 
 
-        <customfonts.TextViewSFProDisplayMedium
+        <TextView
             android:id="@+id/ctvTextdecrib"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
             android:textSize="20dp" />
 
 
-        <customfonts.TextViewSFProDisplayRegular
+        <TextView
             android:id="@+id/ctvText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
