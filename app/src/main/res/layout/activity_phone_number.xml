@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".PhoneNumberActivity">
 
 
@@ -39,6 +40,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="5"
+            android:elevation="0dp"
+            android:visibility="visible"
             android:layout_marginTop="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_15sdp"
             android:layout_marginStart="@dimen/_15sdp"
@@ -53,14 +56,17 @@
                 android:paddingTop="3dp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:paddingBottom="3dp">
+
                 <com.hbb20.CountryCodePicker
                     android:id="@+id/countryCode_picker"
                     android:layout_width="wrap_content"
-                    app:ccp_textSize="@dimen/_10sdp"
                     android:layout_height="wrap_content"
+                    android:elevation="0dp"
                     android:paddingTop="@dimen/_1sdp"
+                    android:textColor="#A6A6A6"
+                    android:textColorHint="#A6A6A6"
                     android:paddingBottom="@dimen/_1sdp"
-                    />
+                    app:ccp_textSize="@dimen/_10sdp" />
 
 
 
@@ -82,14 +88,16 @@
                     android:layout_centerVertical="true"
                     android:layout_marginBottom="@dimen/_1sdp"
                     android:background="@android:color/transparent"
+                    android:inputType="phone"
 
-                    android:hint="+92"
+                    android:hint="Phone"
                     android:minWidth="150dp"
+
                     android:paddingStart="@dimen/medium"
                     android:paddingTop="@dimen/_5sdp"
                     android:paddingBottom="@dimen/_5sdp"
-                    android:textColor="#000"
-                    android:textColorHint="#000000"
+                    android:textColor="#A6A6A6"
+                    android:textColorHint="#A6A6A6"
                     android:textSize="16sp"
                     app:ccp_textSize="@dimen/_10sdp" />
 
@@ -100,16 +108,15 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/startNow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-
+        android:visibility="visible"
         android:layout_marginStart="45dp"
         android:layout_marginTop="@dimen/_25sdp"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="@dimen/_50sdp"
-
         android:background="@drawable/button"
         android:text="Start Now"
         android:textColor="@color/white"
