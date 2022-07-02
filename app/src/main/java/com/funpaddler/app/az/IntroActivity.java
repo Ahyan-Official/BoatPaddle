@@ -31,7 +31,7 @@ public class IntroActivity extends AppCompatActivity implements ViewPager.OnPage
 
     private Context mContext;
     Button buttonSign;
-    int[] mResources = {R.drawable.slide_one, R.drawable.slide_two, R.drawable.slide_three};
+    int[] mResources = {R.drawable.screen_1, R.drawable.screen_2, R.drawable.screen_33,R.drawable.screen_4};
 
 
     @Override
@@ -45,8 +45,9 @@ public class IntroActivity extends AppCompatActivity implements ViewPager.OnPage
         buttonSign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent i = new Intent(IntroActivity.this, LoginActivity.class);
-               // startActivity(i);
+                Intent i = new Intent(IntroActivity.this, PhoneNumberActivity.class);
+                startActivity(i);
+                finish();
             }
         });
         removeNotif();

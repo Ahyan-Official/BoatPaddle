@@ -2,15 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#f7f7f7"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/ivImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-         />
+        android:layout_height="@dimen/_290sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/screen_1" />
+
 
 
     <LinearLayout
@@ -19,30 +21,46 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="20dp"
+        android:layout_marginBottom="@dimen/_100sdp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="100dp"
         android:orientation="vertical">
 
 
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_33sdp"
+            android:id="@+id/fun"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:src="@drawable/funpaddle">
+
+        </ImageView>
+
         <TextView
             android:id="@+id/ctvTextdecrib"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:visibility="visible"
             android:layout_marginBottom="5dp"
             android:text="@string/app_name"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textColor="#464646"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="@dimen/_30sdp" />
 
 
         <TextView
             android:id="@+id/ctvText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="2dp"
             android:text="@string/app_name"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:visibility="visible"
+
+            android:textColor="@color/darkgray"
+            android:textAlignment="center"
+            android:textSize="@dimen/_13sdp" />
 
 
     </LinearLayout>
