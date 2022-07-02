@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     TextView countrytv,coordinate,speed;
     private RequestQueue requestQueue;
     private final String url = "https://api.openweathermap.org/data/2.5/weather?q=london&appid=63bd8fd245636c20cf3acc0240a4b520";
-    private final String appid = "63bd8fd245636c20cf3acc0240a4b520";
+    private final String appid = getString(R.string.weatherKey);
     DecimalFormat df = new DecimalFormat("#.##");
 
     TextView weatherTemp;
@@ -89,7 +89,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         setContentView(R.layout.activity_main);
 
         setUpGClient();
-        String apiKey = "AIzaSyCMCcsahdGyvIIOyM5IkoAJZ9lp_eMWjvc";
+
+
+        String apiKey = getString(R.string.API_Map);
         if (!Places.isInitialized()) {
             Places.initialize(getApplicationContext(), apiKey);
         }
