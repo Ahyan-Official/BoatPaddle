@@ -5,7 +5,8 @@
     <string name="yes">YES!</string>
     <string name="no">NO</string>
 
-
+    <string name="weatherKey">63bd8fd245636c20cf3acc0240a4b520</string>
+    <string name="API_Map">AIzaSyCMCcsahdGyvIIOyM5IkoAJZ9lp_eMWjvc</string>
     <string name="introtext1">Sign up now!</string>
     <string name="introdesc1">We will help you Get There, Move There or Get Food quickly.</string>
     <string name="introtext2">Trackable</string>
