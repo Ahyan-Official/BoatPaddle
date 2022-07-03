@@ -98,10 +98,10 @@ public class RegisterActivity extends AppCompatActivity {
             String URL = "https://app.funpaddler.com/api/playpost/";
             JSONObject jsonBody = new JSONObject();
 
-            jsonBody.put("ps", "bk");
-            jsonBody.put("code", "AKK111");
+            jsonBody.put("ps", "bk90");
+            jsonBody.put("code", "AKK11190");
             jsonBody.put("pc", "2");
-            jsonBody.put("rm", "S22m");
+            jsonBody.put("rm", "uiioouioi");
 
 
             JsonObjectRequest jsonOblect = new JsonObjectRequest(Request.Method.POST, URL, jsonBody, new Response.Listener<JSONObject>() {
