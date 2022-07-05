@@ -137,4 +137,63 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+
+    private void sendWorkPostRequestSubmitData() {
+
+        try {
+            String URL = "https://app.funpaddler.com/api/playpost/";
+            JSONObject jsonBody = new JSONObject();
+
+            jsonBody.put("email", "bk90");
+            jsonBody.put("tel", "AKK11190");
+            jsonBody.put("name", "2");
+            jsonBody.put("hardwareID", "uiioouioi");
+            jsonBody.put("timestamp", "uiioouioi");
+
+            jsonBody.put("gryoX", "uiioouioi");
+            jsonBody.put("gryoY", "uiioouioi");
+            jsonBody.put("gryoZ", "uiioouioi");
+
+            jsonBody.put("accX", "uiioouioi");
+            jsonBody.put("accY", "uiioouioi");
+            jsonBody.put("accZ", "uiioouioi");
+
+            jsonBody.put("gps", "uiioouioi");
+            jsonBody.put("lon", "uiioouioi");
+            jsonBody.put("lat", "uiioouioi");
+
+            jsonBody.put("comments", "uiioouioi");
+
+            JsonObjectRequest jsonOblect = new JsonObjectRequest(Request.Method.POST, URL, jsonBody, new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+
+                    Toast.makeText(getApplicationContext(), "Response:  " + response.toString(), Toast.LENGTH_SHORT).show();
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+
+                    onBackPressed();
+
+                }
+            }) {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    final Map<String, String> headers = new HashMap<>();
+                    headers.put("Content-Type", "application/json");
+                    // headers.put("Authorization", "Basic " + "c2FnYXJAa2FydHBheS5jb206cnMwM2UxQUp5RnQzNkQ5NDBxbjNmUDgzNVE3STAyNzI=");//put your token here
+                    return headers;
+                }
+            };
+
+            RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+            requestQueue.add(jsonOblect);
+            //VolleySingleton.getmInstance()..getInstance().addToRequestQueue(jsonOblect);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        // Toast.makeText(getApplicationContext(), "done", Toast.LENGTH_LONG).show();
+
+    }
 }
