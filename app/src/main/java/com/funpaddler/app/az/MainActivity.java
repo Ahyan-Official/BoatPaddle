@@ -1,6 +1,5 @@
 package com.funpaddler.app.az;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
@@ -13,6 +12,10 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -59,7 +62,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, SensorEventListener, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
 
     TextView exit,paddleNow,stopPaddle,submitData;
     ImageView play,pause,power;
@@ -74,19 +77,21 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     Context mContext;
 
     Location loc;
-
+    private SensorManager mSensorManager;
+    private Sensor mAccelerometer;
+    private Sensor mGyroscope;
 
     TextView countrytv,coordinate,speed;
     private RequestQueue requestQueue;
     private final String url = "https://api.openweathermap.org/data/2.5/weather?q=london&appid=63bd8fd245636c20cf3acc0240a4b520";
-    private final String appid = getString(R.string.weatherKey);
     DecimalFormat df = new DecimalFormat("#.##");
-
+    private String appid;
     TextView weatherTemp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        appid = getString(R.string.weatherKey);
 
         setUpGClient();
 
@@ -117,6 +122,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         pause = findViewById(R.id.pause);
         power = findViewById(R.id.power);
 
+
+        mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mGyroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
         submitData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -209,6 +218,33 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     }
 
+    protected void onResume() {
+        super.onResume();
+        mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+        mSensorManager.registerListener(this, mGyroscope, SensorManager.SENSOR_DELAY_NORMAL);
+    }
+    protected void onPause() {
+        super.onPause();
+        mSensorManager.unregisterListener(this);
+    }
+
+//    public void onSensorChanged(SensorEvent sensorEvent) {
+//        String sensorName = sensorEvent.sensor.getName();
+//        Log.d("asd",sensorName + ": X: " + sensorEvent.values[0] + "; Y: " + sensorEvent.values[1] + "; Z: " + sensorEvent.values[2] + ";");
+//
+//    }
+
+    @Override
+    public void onSensorChanged(SensorEvent sensorEvent) {
+        String sensorName = sensorEvent.sensor.getName();
+        Log.e("asd",sensorName + ": X: " + sensorEvent.values[0] + "; Y: " + sensorEvent.values[1] + "; Z: " + sensorEvent.values[2] + ";");
+
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int i) {
+
+    }
     private synchronized void setUpGClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(MainActivity.this, 0, this)
@@ -579,6 +615,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             requestQueue.add(stringRequest);
         }
     }
+
 
 
 }
