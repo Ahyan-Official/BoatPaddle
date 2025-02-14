@@ -16,7 +16,8 @@ Here are some screenshots of the **FunPaddler** app:
 
 You can also check out the demo video below for a quick overview of the app in action:
 
-[![Watch the video](https://github.com/Ahyan-Official/BoatPaddle/blob/master/XRecorder_02072022_113011.mp4)
+[![Watch the video](https://img.youtube.com/vi/riuiNIPbwHw/maxresdefault.jpg)](https://www.youtube.com/watch?v=riuiNIPbwHw)
+
 
 ## Features
 
