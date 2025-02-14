@@ -16,7 +16,7 @@ Here are some screenshots of the **FunPaddler** app:
 
 You can also check out the demo video below for a quick overview of the app in action:
 
-[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Watch the video](XRecorder_02072022_113011.mp4)
 
 ## Features
 
